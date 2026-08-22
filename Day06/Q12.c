@@ -21,11 +21,9 @@ Positive
 int main() {
     int num;
 
-    // Prompt user for input
     printf("Enter an integer: ");
     scanf("%d", &num);
 
-    // Check conditions using an if-else ladder
     if (num > 0) {
         printf("%d is a positive number.\n", num);
     } 
