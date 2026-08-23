@@ -20,7 +20,6 @@ int main() {
     printf("Enter an integer: ");
     scanf("%d", &num);
 
-    // Check if the number is perfectly divisible by 2
     if (num % 2 == 0) {
         printf("%d is an even number.\n", num);
     } else {
