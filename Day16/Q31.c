@@ -13,14 +13,22 @@ Output 2:
 111
 
 */
-int main(){
-	int n ,remainder;
-	printf("Enter the number\n");
-	scanf("%d" , &n);
-	
-	while(n>0){
-		remainder = n%2;
-		n=n/2;
-	}
+int main() {
+    int decimal_num, binary_num = 0, place_value = 1, remainder;
+
+    printf("Enter a decimal number: ");
+    scanf("%d", &decimal_num);
+
+    int temp = decimal_num;
+
+    while (temp > 0) {
+        remainder = temp % 2;         
+        binary_num = binary_num + (remainder * place_value); 
+        place_value = place_value * 10; 
+        temp = temp / 2;               
+    }
+
+    printf("Decimal %d in binary is: %d\n", decimal_num, binary_num);
+
     return 0;
 }
