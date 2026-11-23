@@ -1,5 +1,5 @@
-#include<stdio.h>
 /*Q61: Search for an element in an array using linear search.
+
 
 Sample Test Cases:
 Input 1:
@@ -17,31 +17,33 @@ Output 2:
 -1
 
 */
-int main(){
-	int n,a,found=-1;
-	printf("Enter the number of terms in an array\n");
-	scanf("%d", &n);
-	
-	int arr[n], i;
-	for(i=0;i<n;i++){
-		printf("Enter the element in arr[%d]\n" , i);
-		scanf("%d", &arr[i]);
+
+#include <stdio.h>
+
+int main() {
+    int n, key, i;
+    
+    printf("Enter the number of elements in the array: ");
+    scanf("%d", &n);
+    
+    int arr[n];
+    printf("Enter the elements of the array: ");
+    for (i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
     }
     
-	printf("Enter the element you want to search\n");
-	scanf("%d", &a);
-	
-	for(i=0;i<n;i++){
-		if(a==arr[i]){
-			found=i;
-            break;
-		}
-	}
-    if(found!=0){
-        printf("Found at index: %d\n", found);
+    printf("Enter the element to search: ");
+    scanf("%d", &key);
+    
+    for (i = 0; i < n; i++) {
+        if (arr[i] == key) {
+            printf("Found at index %d", i);
+            return 0;
+        }
+        else if (i == n - 1) {
+            printf("Not found in the array");
+        }
     }
-    else{
-        printf("-1");
-    }
-	return 0;
+    
+    return 0;
 }

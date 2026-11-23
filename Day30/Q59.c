@@ -16,7 +16,7 @@ Even=4, Odd=0
 
 */
 int main(){
-	int n,odd=0, even=0;;
+	int n,odd=0, even=0;
 	printf("Enter the number of terms in an array\n");
 	scanf("%d", &n);
 	
